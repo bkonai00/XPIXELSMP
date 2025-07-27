@@ -1,579 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XPIXELSMP - Minecraft Survival Server</title>
-    <!-- Material Icons -->
-     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- Flaticon -->
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-brands/css/uicons-brands.css'>
-    <!-- Minecraft Font -->
-   
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XPIXELSMP - Minecraft Server</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="logo-container">
-            <a href="#" class="logo" id="homeLink">
-                <div class="logo-icon"></div>
-                <span class="logo-text">XPIXELSMP</span>
-            </a>
-        </div>
-        
-        <!-- Menu Button - Now visible on all devices -->
-        <button class="menu-btn" id="mobileMenuBtn">
-            <i class="material-icons">menu</i>
-            <span></span>
-        </button>
-    </header>
-
-    <!-- Navigation Drawer -->
-    <div class="mobile-nav" id="mobileNav">
-        <ul class="mobile-nav-links">
-            <li><a href="#" class="nav-link" data-page="home"><i class="material-icons">home</i> Home</a></li>
-            <li><a href="#" class="nav-link" data-page="smp"><i class="material-icons">info</i> XPIXEL-SMP</a></li>
-            <li><a href="#" class="nav-link" data-page="whyJoin"><i class="material-icons">question_answer</i> Why Join</a></li>
-            <li><a href="#" class="nav-link" data-page="donationPerks"><i class="material-icons">star</i> Rank Perks</a></li>
-            <li><a href="#" class="nav-link" data-page="donate"><i class="material-icons">attach_money</i> Donate</a></li>
-            <li><a href="#" class="nav-link" data-page="discord"><i class="material-icons">chat</i> Discord</a></li>
-            <li><a href="#" class="nav-link" data-page="aboutOwner"><i class="material-icons">person</i> About Owner</a></li>
-	    <li><a href="#" class="nav-link" data-page="developer"><i class="material-icons">engineering</i> This Website Developer</a></li>
-            <li><a href="#" class="nav-link" data-page="supportOwner"><i class="material-icons">favorite</i> Support Owner</a></li>
-        </ul>
+  <nav class="navbar">
+    <div class="nav-logo">
+      <span class="logo-svg">
+        <!-- Neon pixel cube SVG -->
+        <svg width="32" height="32" viewBox="0 0 64 64" fill="none">
+          <rect x="14" y="14" width="36" height="36" rx="8" fill="#00ffff" fill-opacity="0.2" stroke="#00ffff" stroke-width="3"/>
+          <rect x="22" y="22" width="20" height="20" rx="4" fill="#00ffff" fill-opacity="0.8"/>
+        </svg>
+      </span>
+      <span>XPIXELSMP</span>
     </div>
-
-    <!-- Overlay for mobile menu -->
-    <div class="overlay" id="overlay"></div>
-
-    <!-- Main Content -->
-    <main>
-        <!-- Home Section -->
-        <section id="home" class="page-section active">
-            <div class="home-section">
-                <h1 class="section-title">Welcome to XPIXELSMP!</h1>
-                <p class="welcome-message">
-                    Experience the ultimate Minecraft survival multiplayer adventure on XPIXELSMP! 
-                    Join our vibrant community of builders, explorers, and redstone engineers in a 
-                    world filled with endless possibilities. With custom features, player-run shops, 
-                    and regular events, there's always something exciting happening in our blocky universe.
-                </p>
-                
-                <div class="server-ip-container">
-                    <div class="ip-box">
-                        <h3 class="ip-title">Java Edition</h3>
-                        <div class="ip-address">
-                            <span id="java-ip">play.xpixel.in:25565</span>
-                            <button class="copy-btn" onclick="copyToClipboard('java-ip')">Copy</button>
-                        </div>
-                    </div>
-                    <div class="ip-box">
-                        <h3 class="ip-title">Support Me</h3>
-			<a href="https://stpz.in/xdfunyt/">
-                    <button class="purchase-btn">Donate Here</button>
-                    </a>
-                                            </div>
-                </div>
-            </div>
-
-            <!-- Latest Updates Section -->
-            <div class="updates-section">
-                <h2 class="section-title">Latest Updates</h2>
-                <div class="updates-grid">
-                    <div class="update-card">
-                        <div class="update-image" style="background-image: url('https://i.postimg.cc/C5Qj0CXP/Chat-GPT-Image-Jun-11-2025-01-59-43-PM.png');"></div>
-                        <div class="update-content">
-                            <h3 class="update-title">Season II Launch!</h3>
-                            <p class="update-date"></p>
-                            <p class="update-excerpt">Our brand new season has begun with fresh worlds, custom biomes, and exciting new gameplay features...</p>
-                            <a class="read-more" data-modal="update1">Read More →</a>
-                        </div>
-                    </div>
-                    
-                                        </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- XPIXEL-SMP Page -->
-        <section id="smp" class="page-section">
-            <div class="smp-page">
-                <h2 class="section-title">XPIXEL-SMP: Our Survival World</h2>
-                
-                <div class="smp-content">
-                    <div class="smp-feature">
-                        <h3 class="smp-feature-title"><i class="material-icons">terrain</i> Custom Terrain Generation</h3>
-                        <p>Our world features unique terrain generation that creates stunning landscapes while maintaining the vanilla Minecraft feel. Explore vast mountain ranges, deep canyons, and lush valleys that feel familiar yet fresh.</p>
-                        <p>The world border starts at 10,000 blocks and expands as the community grows, ensuring plenty of space for everyone to build and explore.</p>
-                    </div>
-                    
-                    <div class="smp-feature">
-                        <h3 class="smp-feature-title"><i class="material-icons">store</i> Player-Driven Economy</h3>
-                        <p>XPIXEL-SMP features a completely player-run economy with our shopping district at spawn. Players can claim shop plots to sell their goods and services to other players.</p>
-                        <p>We use a diamond-based currency system with custom economy plugins that prevent inflation and keep the market balanced for all players.</p>
-                    </div>
-                    
-                    <div class="smp-feature">
-                        <h3 class="smp-feature-title"><i class="material-icons">group</i> Community Focus</h3>
-                        <p>At XPIXEL-SMP, we prioritize building a welcoming community. We have regular community events like build competitions, PvP tournaments, and cooperative projects.</p>
-                        <p>Our staff team is always available to help new players get started and ensure everyone follows our community guidelines.</p>
-                    </div>
-                    
-                    <div class="smp-feature">
-                        <h3 class="smp-feature-title"><i class="material-icons">settings</i> Vanilla+ Experience</h3>
-                        <p>We've carefully selected quality-of-life plugins that enhance the vanilla experience without changing the core gameplay. Features include:</p>
-                        <ul style="margin-left: 2rem; margin-top: 0.5rem;">
-                            <li>One-player sleep system</li>
-                            <li>Graves to protect items on death</li>
-                            <li>Customizable armor stands</li>
-                            <li>Player heads as trophies</li>
-                            <li>Anti-grief protections</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="smp-feature">
-                        <h3 class="smp-feature-title"><i class="material-icons">update</i> Regular Updates</h3>
-                        <p>Our world is constantly evolving with regular updates that add new content and features based on community feedback. We maintain detailed changelogs and announce all updates in our Discord.</p>
-                        <p>Every 6-12 months, we start a fresh season to give new players a fair start while preserving the old world for nostalgia.</p>
-                    </div>
-                    
-                    <div class="smp-feature">
-                        <h3 class="smp-feature-title"><i class="material-icons">security</i> Server Security</h3>
-                        <p>We take server security seriously with advanced anti-cheat systems, regular backups, and a dedicated staff team to monitor and maintain a fair playing environment for all.</p>
-                        <p>Our server features include:</p>
-                        <ul style="margin-left: 2rem; margin-top: 0.5rem;">
-                            <li>24/7 monitoring</li>
-                            <li>Daily backups</li>
-                            <li>Anti-xray protections</li>
-                            <li>Grief prevention systems</li>
-                            <li>Player claim protections</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="smp-feature">
-                        <h3 class="smp-feature-title"><i class="material-icons">event</i> Special Events</h3>
-                        <p>We host regular special events to keep the gameplay fresh and exciting. These include:</p>
-                        <ul style="margin-left: 2rem; margin-top: 0.5rem;">
-                            <li>Seasonal build competitions</li>
-                            <li>PvP tournaments</li>
-                            <li>Scavenger hunts</li>
-                            <li>Community projects</li>
-                            <li>Holiday celebrations</li>
-                        </ul>
-                        <p>Winners receive special rewards and recognition in our community!</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Why Join Page -->
-        <section id="whyJoin" class="page-section">
-            <div class="why-join-page">
-                <h2 class="section-title">Why Join XPIXELSMP?</h2>
-                <p style="text-align: center; margin-bottom: 2rem;">Discover what makes our community special</p>
-                
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="material-icons">extension</i>
-                        </div>
-                        <h3 class="feature-title">Vanilla+ Gameplay</h3>
-                        <p>Enjoy vanilla survival with quality-of-life enhancements that improve the experience without changing the core gameplay. We've carefully balanced our plugins to maintain the authentic Minecraft feel.</p>
-                    </div>
-                    
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="material-icons">security</i>
-                        </div>
-                        <h3 class="feature-title">All Players Welcome</h3>
-                        <p>We welcome both cracked and premium players, ensuring everyone can join regardless of account type. Our authentication system keeps accounts secure while being accessible to all.</p>
-                    </div>
-                    
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="material-icons">speed</i>
-                        </div>
-                        <h3 class="feature-title">Lag-Free Hosting</h3>
-                        <p>Our servers are hosted on high-performance hardware in India, providing optimal performance and low latency for players in the region. We maintain 99.9% uptime with daily backups.</p>
-                    </div>
-                    
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="material-icons">discord</i>
-                        </div>
-                        <h3 class="feature-title">Discord Integration</h3>
-                        <p>Our server is fully integrated with Discord, allowing for cross-platform chat, live server status, and easy communication between players and staff.</p>
-                    </div>
-                    
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="material-icons">people</i>
-                        </div>
-                        <h3 class="feature-title">Friendly Community</h3>
-                        <p>Join an active, welcoming community of Minecraft players who love to collaborate and have fun together. We have players of all skill levels and ages.</p>
-                    </div>
-                    
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="material-icons">event</i>
-                        </div>
-                        <h3 class="feature-title">Regular Events</h3>
-                        <p>Participate in weekly events like build competitions, PvP tournaments, scavenger hunts, and community projects with awesome prizes.</p>
-                    </div>
-                    
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="material-icons">gavel</i>
-                        </div>
-                        <h3 class="feature-title">Fair Play</h3>
-                        <p>Our strict no-cheating policy and active moderation ensure a fair playing field for everyone. We use advanced anti-cheat systems to detect and prevent hacks.</p>
-                    </div>
-                    
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="material-icons">favorite</i>
-                        </div>
-                        <h3 class="feature-title">No Pay-to-Win</h3>
-                        <p>All donation perks are purely cosmetic - no gameplay advantages are ever sold. We believe in maintaining a fair survival experience for all players.</p>
-                    </div>
-                    
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="material-icons">terrain</i>
-                        </div>
-                        <h3 class="feature-title">Custom World</h3>
-                        <p>Explore our custom-generated world with unique terrain features while maintaining the vanilla Minecraft feel. New biomes and structures make exploration exciting.</p>
-                    </div>
-                    
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="material-icons">store</i>
-                        </div>
-                        <h3 class="feature-title">Player Economy</h3>
-                        <p>Participate in our player-driven economy where you can buy and sell items with other players. Set up your own shop at spawn and become a business mogul!</p>
-                    </div>
-                    
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="material-icons">update</i>
-                        </div>
-                        <h3 class="feature-title">Frequent Updates</h3>
-                        <p>We regularly update the server with new content, features, and improvements based on community feedback. Your suggestions help shape the server!</p>
-                    </div>
-                    
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="material-icons">help</i>
-                        </div>
-                        <h3 class="feature-title">Helpful Staff</h3>
-                        <p>Our friendly staff team is always available to help with any questions or issues you might have. We're dedicated to making your experience enjoyable.</p>
-                    </div>
-                </div>
-                
-                <div style="margin-top: 3rem; text-align: center;">
-                    <h3>Ready to Join Our Community?</h3>
-                    <p>Click the button below to copy the server IP and start your adventure today!</p>
-                    <div style="display: flex; justify-content: center; margin-top: 1rem;">
-                                            
-                                
-                            </div>
-                        </div>
-                    </div>
-                
-            
-        </section>
-
-        <!-- Donation Perks Section -->
-        <section id="donationPerks" class="page-section">
-            <div class="donation-section">
-                <h2 class="section-title">Support Us & Unlock Rank Perks</h2>
-                <p style="text-align: center; margin-bottom: 2rem;">Support the server and get awesome cosmetic perks!</p>
-                
-                <div class="important-notes">
-                    <h4>Important Notes:</h4>
-                    <ul>
-                        <li><span>🛡️</span> Absolutely no gear, enchantments, in-game currency, or power advantages</li>
-                        <li><span>🔄</span> Ranks expire every 30 days – renew to keep perks active</li>
-                        <li><span>🧾</span> Supports server upgrades, events & maintenance</li>
-                        <li><span>🎉</span> For fun-loving, fair community players!</li>
-                    </ul>
-                </div>
-                
-                <!-- VIP Rank -->
-                <div class="rank-box vip">
-                    <div class="rank-header">
-                        <h3 class="rank-title">VIP</h3>
-                        <div class="rank-price">₹39/month</div>
-                    </div>
-                    <ul class="rank-features">
-                        <li>VIP tag before your name</li>
-                        <li>Custom name color</li>
-                        <li>3 particle effects to choose from</li>
-                        <li>/hat command access</li>
-                        <li>Set 2 homes /home locations</li>
-                        <li>Donator Discord role</li>
-                        <li>Name on Supporter Page (Website)</li>
-			<li>Access to /me chat emotes</li>
-			<li>Minor glow around name at spawn</li>
-			<li>5 Ranks crate keys / month</li>
-                    </ul> <a href="https://stpz.in/xdfunyt/">
-                    <button class="purchase-btn">Purchase [ VIP ] Rank</button>
-                    </a>
-                </div>
-                
-                <!-- VIP+ Rank -->
-                <div class="rank-box vip-plus">
-                    <div class="rank-header">
-                        <h3 class="rank-title">VIP+</h3>
-                        <div class="rank-price">₹79/month</div>
-                    </div>
-                    <ul class="rank-features">
-                        <li>All VIP perks</li>
-                        <li>Gradient name color</li>
-                        <li>/nick (change nickname)</li>
-                        <li>/workbench (open crafting table anytime)</li>
-                        <li>Set 4 homes /home locations</li>
-                        <li>10 Ranks crate keys / month</li>
-                        <li>Name on Spawn Donor Wall</li>
-                        <li>Priority support</li>
-			<li>Use of small particle trails (e.g. bubble, crit, happy villager)</li>
-			<li>/sit and /lay emotes</li>
-   			<li>Exclusive VIP+ join message</li>
-                     </ul> <a href="https://stpz.in/xdfunyt/">
-                    <button class="purchase-btn">Purchase [ VIP+ ] Rank</button>
-                    </a>
-                </div>
-                
-                <!-- Legend Rank -->
-                <div class="rank-box legend">
-                    <div class="rank-header">
-                        <h3 class="rank-title">Legend</h3>
-                        <div class="rank-price">₹149/month</div>
-                    </div>
-                    <ul class="rank-features">
-                        <li>All VIP+ perks</li>
-                        <li>Glow effect in tablist</li>
-                        <li>Choose 1 of 5 animated trail effects</li>
-                        <li>Set 6 homes</li>
-                        <li>Custom tab name tag (e.g. ⚡ CoolPlayer)</li>
-                        <li>Custom join/leave messages</li>
-                        <li>/near command (see nearby players)</li>
-                        <li>Minor ambient sound effect around player (optional toggle)</li>
-                        <li>/back after death (1 use every 1h)</li>
-			<li>15 Ranks crate keys / month</li>
-                     </ul> <a href="https://stpz.in/xdfunyt/">
-     <button class="purchase-btn">Purchase [ LEGEND ] Rank</button>
- </a>
-                </div>
-                
-                <!-- Elite Rank -->
-                <div class="rank-box elite">
-                    <div class="rank-header">
-                        <h3 class="rank-title">Elite</h3>
-                        <div class="rank-price">₹229/month</div>
-                    </div>
-                    <ul class="rank-features">
-                        <li>All Legend perks</li>
-                        <li>Animated gradient name</li>
-                        <li>Set 8 homes</li>
-                        <li>/back with 10min cooldown</li>
-                        <li>Access /pose (stand, sit, lie poses)</li>
-                        <li>Unique particle aura (🔥 Fire, ❤️ Hearts, 💨 Smoke)</li>
-                        <li>Exclusive Elite pet</li>
-                        <li>Player head/banner displayed in Spawn Hall of Fame</li>
-                        <li>Minor join/leave effects (particles + sound)</li>
-			<li>20 Ranks crate keys / month</li>
-                     </ul> <a href="https://stpz.in/xdfunyt/">
-     <button class="purchase-btn">Purchase [ ELITE ] Rank</button>
- </a>
-                </div>
-                
-                <!-- Elite+ Rank -->
-                <div class="rank-box elite-plus">
-                    <div class="rank-header">
-                        <h3 class="rank-title">Elite+</h3>
-                        <div class="rank-price">₹300/month</div>
-                    </div>
-                    <ul class="rank-features">
-                        <li>All Elite perks</li>
-                        <li>Morph into passive mobs (pig, cow, chicken – cosmetic)</li>
-                        <li>Set 12 homes</li>
-                        <li>Exclusive particle combo (e.g: 🪽 Wings, ✨ Sparks)</li>
-                        <li>Name displayed permanently on Elite+ Wall</li>
-                        <li>Premium Discord role with priority in voice events</li>
-                        <li>Early access to new features</li>
-			<li>25 Ranks crate keys / month</li>
-                     </ul> <a href="https://stpz.in/xdfunyt/">
-     <button class="purchase-btn">Purchase [ ELITE+ ] Rank</button>
- </a>
-                </div>
-                
-                <!-- YouTuber Rank -->
-                <div class="rank-box youtuber">
-                    <div class="rank-header">
-                        <h3 class="rank-title">YouTuber</h3>
-                        <div class="rank-price">Free</div>
-                    </div>
-                    <ul class="rank-features">
-                        <li>Special Red Name Tag in Chat</li>
-                        <li>Access to /fly (do not use in PVP or survival - just for fun)</li>
-                        <li>Exclusive YouTuber Kit (/kit youtuber)</li>
-                        <li>Priority in events</li>
-                        <li>Featured on our website & Discord</li>
-                    </ul>
-                    
-                    <div class="requirements-box">
-                        <h4>Requirements:</h4>
-                        <ul>
-                            <li><span>▶️</span> At least 50+ subscribers</li>
-                            <li><span>▶️</span> Upload 1+ video or 1+ livestream per week on XPIXEL SMP</li>
-                            <li><span>▶️</span> Must have XPIXEL SMP IP and Discord link in the video description</li>
-                            <li><span>▶️</span> Active on the server and respectful in the community</li>
-                        </ul>
-                    </div>
-                    
-                     </ul> <a href="https://discord.xpixel.in/">
-     <button class="purchase-btn">Apply for YouTuber Rank</button>
- </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Donate Section -->
-        <section id="donate" class="page-section">
-            <div class="donate-section">
-                <h2 class="section-title">Support XPIXELSMP</h2>
-                <div class="donate-content">
-                    <div class="donate-icon">
-                        <i class="material-icons">volunteer_activism</i>
-                    </div>
-                    <h3>Help Keep Our Server Running</h3>
-                    <p>Your donations help cover server costs, fund new features, and allow us to continue providing the best Minecraft experience for our community.</p>
-                    <p>Every contribution, no matter how small, makes a difference and is greatly appreciated!</p>
-                    <a href="https://stpz.in/xdfunyt/" class="donate-btn" target="_blank">Donate Here</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Discord Section -->
-        <section id="discord" class="page-section">
-            <div class="discord-section">
-                <h2 class="section-title">Join Our Discord</h2>
-                <p>Connect with our community, get server updates, participate in events, and chat with other players!</p>
-                
-                <div class="discord-widget">
-                    <div class="discord-icon">
-                        <i class="material-icons" style="font-size: inherit;">discord</i>
-                    </div>
-                    <h3>XPIXELSMP Official Discord</h3>
-                    <p>Join our growing community of over 500 members!</p>
-                    <p>Get server announcements, participate in events, and connect with other players.</p>
-                    <a href="https://discord.xpixel.in/" class="discord-btn">Join Discord</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- About Owner Section -->
-        <section id="aboutOwner" class="page-section">
-            <div class="owner-section">
-                <h2 class="section-title">About The Owner</h2>
-                <div class="owner-info">
-                    <h3>Bikram Konai</h3>
-                    <div style="margin-bottom: 1rem;">
-                        <span class="role-badge role-owner">Owner</span>
-                        <span class="role-badge role-"></span>
-                        <span class="role-badge role-moderator">Moderator</span>
-                    </div>
-                    <p>The creator and main developer of XPIXELSMP. With over 5 years of Minecraft server experience, Bikram has built XPIXELSMP from the ground up to create the perfect survival experience.</p>
-                    <p>"My goal with XPIXELSMP was to create a server where players can enjoy vanilla-like survival with just the right amount of quality-of-life improvements. I wanted a community where everyone can have fun without pay-to-win elements ruining the experience."</p>
-                    
-                    <div class="owner-social">
-                        <a href="https://www.instagram.com/biky0007" class="social-icon"><i class="fi fi-brands-instagram"></i></a>
-                        <a href="https://youtube.com/@xdfunyt?si=J7KMNnNAlkkbOz_O" class="social-icon"><i class="fi fi-brands-youtube"></i></a>
-                        <a href="https://discord.gg/wVJfRJaY" class="social-icon"><i class="fi fi-brands-discord"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            </div>
-        </section>
-
-        <!-- Support Owner Section -->
-        <section id="supportOwner" class="page-section">
-            <div class="support-section">
-                <h2 class="section-title">Support The Owner</h2>
-                <div class="support-content">
-                    <div class="support-icon">
-                        <i class="fi fi-brands-youtube"></i>
-                    </div>
-                    <h3>Please support the owner by subscribing to his YouTube channel</h3>
-                    <p>Your support helps the owner continue developing and improving XPIXELSMP for everyone to enjoy!</p>
-                    <a href="https://youtube.com/@xdfunyt?si=J7KMNnNAlkkbOz_O" class="support-btn" target="_blank">
-                        <i class="fi fi-brands-youtube"></i> xdfunyt
-                    </a>
-                </div>
-            </div>
-        </section>
-	<!-- Manager Section -->
-<section id="developer" class="page-section">
-    <div class="owner-section">
-        <h2 class="section-title">Our Website Developer</h2>
-        <div class="owner-info">
-            <h3>Nitin Sharma</h3>
-            <div style="margin-bottom: 1rem;">
-                <span class="role-badge role-Developer">Developer</span>
-                <span class="role-badge role-builder">Builder</span>
-                <span class="role-badge role-helper"></span>
-            </div>
-            <p>Nitin is our Website Developer.</p>
-            <p>"My focus is on creating the best possible experience for our players."</p>
-            </p>
-
-            <div class="owner-social">
-                <!-- Add Developer's social links here if available -->
-                <a href="https://www.instagram.com/@itz_nitin_sharma08" class="social-icon"><i class="fi fi-brands-instagram"></i></a>
-                <a href="https://discordapp.com/users/@nitin._.sharma" class="social-icon"><i class="fi fi-brands-discord"></i></a>
-            </div>
-        </div>
-    </div>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-toggle-label">&#9776;</label>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About Server</a></li>
+      <li><a href="whyjoin.html">Why Join</a></li>
+      <li><a href="ranks.html">Rank Perks</a></li>
+      <li><a href="donate.html">Donate</a></li>
+      <li><a href="discord.html">Discord</a></li>
+      <li><a href="owner.html">About Owner</a></li>
+      <li><a href="support.html">Support Owner</a></li>
+      <li><a href="posts.html">Posts</a></li>
+    </ul>
+  </nav>
+  <main class="container homepage-main">
+    <section class="server-info home-info neon-border">
+      <div class="server-ip">
+        <span class="icon-server"></span>
+        <strong>Server IP:</strong>
+        <span class="neon-badge">play.xpixel.in</span>
+      </div>
+      <div class="server-status">
+        <span class="icon-status"></span>
+        <strong>Status:</strong>
+        <span class="status-online neon-badge">Online</span>
+      </div>
+      <div class="discord-link">
+        <a href="https://discord.xpixel.in/" target="_blank" class="neon-btn">
+          <span class="icon-discord"></span> Join Discord
+        </a>
+      </div>
+    </section>
+<section class="latest-posts neon-border">
+  <h2 class="neon-text">Latest Posts</h2>
+  <ul class="posts-list">
+    <li><a href="posts.html#post1">Season 5 Launch - July 2025</a></li>
+    <li><a href="posts.html#post2">New Economy Plugin Added!</a></li>
+    <li><a href="posts.html#post3">PvP Tournament Results</a></li>
+  </ul>
+  <a href="posts.html" class="neon-btn">View All Posts</a>
 </section>
-    
-    </main>
-
-    <!-- Update Modals -->
-    <div id="update1" class="modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <div class="modal-image" style="background-image: url('https://i.postimg.cc/C5Qj0CXP/Chat-GPT-Image-Jun-11-2025-01-59-43-PM.png');"></div>
-            <h2>Season 2 Launch!</h2>
-            <p class="update-date"></p>
-            <p>We're excited to announce the launch of Season 2 on XPIXELSMP! This season brings a completely fresh world with brand new features:</p>
-            <ul style="margin: 1rem 0; padding-left: 1.5rem;">
-                <li>Custom terrain generation with new biomes</li>
-                <li>Revamped economy system with player shops</li>
-                <li>New custom mobs and creatures</li>
-                <li>Quality-of-life improvements based on your feedback</li>
-                <li>Fresh start for all players - no carryover from previous seasons</li>
-            </ul>
-            <p>To celebrate the new season, we're hosting a special launch event End Of the Month</p>
-            <h2 style="color: cyan;">Comming Soon...</h2>
-        </div>
-    </div>
-
-    
-
-    <!-- Footer -->
-    <footer>
-        <div class="social-links">
-            <a href="https://www.instagram.com/biky0007" class="social-link"><i class="fi fi-brands-instagram"></i></a> <!-- Instagram -->
-            <a href="https://discord.gg/wVJfRJaY" class="social-link"><i class="fi fi-brands-discord"></i></a> <!-- Discord -->
-            <a href="https://youtube.com/@xdfunyt?si=J7KMNnNAlkkbOz_O" class="social-link"><i class="fi fi-brands-youtube"></i></a> <!-- YouTube -->
-        </div>
-        <p class="copyright">© 2025 XPIXELSMP | xpixel.in | All Rights Reserved</p>
-    </footer>
-
-  <script src="script.js">
-</script>
+  </main>
+  <footer>
+    &copy; 2025 XPIXELSMP &mdash; by Bikram Konai
+  </footer>
 </body>
 </html>
