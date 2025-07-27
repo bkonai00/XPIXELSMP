@@ -1,0 +1,200 @@
+:root {
+  --neon-blue: #00ffff;
+  --neon-dark: #080e1d;
+  --neon-glow: 0 0 8px #00ffff, 0 0 12px #00e6e6;
+  --neon-btn-bg: #021e31;
+  --neon-border: 2px solid var(--neon-blue);
+  --font-head: 'Audiowide', 'Orbitron', Arial, sans-serif;
+  --font-body: 'Roboto', Arial, sans-serif;
+}
+
+body {
+  background: var(--neon-dark);
+  color: #fff;
+  font-family: var(--font-body);
+  margin: 0;
+  min-height: 100vh;
+  letter-spacing: 0.05em;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  background: #0a1836;
+  padding: 0 1em;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.nav-logo {
+  font-family: var(--font-head);
+  font-size: 2em;
+  color: var(--neon-blue);
+  text-shadow: var(--neon-glow);
+  flex: 1;
+  letter-spacing: 0.12em;
+}
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1em;
+  margin: 0;
+  padding: 0;
+}
+.nav-links li a {
+  color: var(--neon-blue);
+  text-decoration: none;
+  font-family: var(--font-head);
+  padding: 0.5em 0.8em;
+  border-radius: 4px;
+  transition: background 0.2s;
+  text-shadow: var(--neon-glow);
+}
+.nav-links li a:hover, .nav-links li a.active {
+  background: var(--neon-btn-bg);
+  box-shadow: var(--neon-glow);
+}
+.nav-toggle {
+  display: none;
+}
+.nav-toggle-label {
+  display: none;
+  font-size: 2em;
+  color: var(--neon-blue);
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .nav-links {
+    flex-direction: column;
+    position: absolute;
+    background: #0a1836ee;
+    top: 60px;
+    left: 0;
+    right: 0;
+    display: none;
+  }
+  .nav-toggle:checked ~ .nav-links {
+    display: flex;
+  }
+  .nav-toggle-label {
+    display: block;
+  }
+}
+
+.container {
+  max-width: 900px;
+  margin: 2em auto;
+  padding: 2em;
+  background: #121e38cc;
+  border-radius: 16px;
+  box-shadow: var(--neon-glow);
+  border: var(--neon-border);
+}
+
+.hero {
+  text-align: center;
+  padding: 2em 1em;
+}
+.neon-text {
+  font-family: var(--font-head);
+  font-size: 2.2em;
+  color: var(--neon-blue);
+  text-shadow: var(--neon-glow);
+  margin-bottom: 0.5em;
+}
+.neon-border {
+  border: var(--neon-border);
+  box-shadow: var(--neon-glow);
+  border-radius: 16px;
+  background: #121e38cc;
+}
+
+.server-info {
+  margin: 2em auto 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1em;
+  justify-items: center;
+  align-items: center;
+}
+.server-ip, .server-status, .discord-link, .donate-link, .youtube-link, .owner-link {
+  font-size: 1.1em;
+  background: var(--neon-btn-bg);
+  color: var(--neon-blue);
+  border-radius: 8px;
+  padding: 0.7em 1em;
+  margin: 0.5em 0;
+  box-shadow: var(--neon-glow);
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-family: var(--font-head);
+}
+.neon-badge {
+  background: #011f2e;
+  color: var(--neon-blue);
+  padding: 0.2em 0.5em;
+  border-radius: 6px;
+  box-shadow: 0 0 8px #00e6ff88;
+  font-weight: 700;
+  font-family: var(--font-head);
+}
+.status-online {
+  color: #00ffea;
+  background: #0f3d2e;
+  text-shadow: 0 0 8px #00ffe6;
+}
+
+.neon-btn {
+  background: var(--neon-btn-bg);
+  color: var(--neon-blue);
+  border: var(--neon-border);
+  border-radius: 8px;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  font-family: var(--font-head);
+  box-shadow: var(--neon-glow);
+  margin-top: 0.2em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  transition: background 0.15s;
+}
+.neon-btn:hover {
+  background: #011827;
+  color: #fff;
+}
+
+footer {
+  text-align: center;
+  padding: 1em;
+  background: #111e38;
+  color: var(--neon-blue);
+  font-family: var(--font-head);
+  font-size: 1em;
+  margin-top: 2em;
+  box-shadow: 0 0 8px #00e6ff44;
+}
+
+.icon-server::before { content: "🖥️"; }
+.icon-status::before { content: "🔵"; }
+.icon-discord::before { content: "💬"; }
+.icon-donate::before { content: "💸"; }
+.icon-youtube::before { content: "▶️"; }
+.icon-owner::before { content: "👑"; }
+
+/* Neon effects for headings, buttons, links */
+h1, h2, h3, h4 {
+  font-family: var(--font-head);
+  color: var(--neon-blue);
+  text-shadow: var(--neon-glow);
+}
+
+/* Utility classes */
+.futuristic {
+  font-family: var(--font-head);
+  letter-spacing: 0.12em;
+  color: var(--neon-blue);
+  text-shadow: var(--neon-glow);
+}
