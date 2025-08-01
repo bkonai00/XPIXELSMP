@@ -111,24 +111,24 @@ body {
 }
 
 .server-info {
-  margin: 2em auto 0 auto;
+  margin: 1em auto 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 1em;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 0.5fr));
+  gap: 0.5em;
   justify-items: center;
   align-items: center;
 }
 .server-ip, .server-status, .discord-link, .donate-link, .youtube-link, .owner-link {
-  font-size: 1.1em;
+  font-size: 1em;
   background: var(--neon-btn-bg);
   color: var(--neon-blue);
-  border-radius: 8px;
-  padding: 0.7em 1em;
-  margin: 0.5em 0;
+  border-radius: 4px;
+  padding: 0.4em 0.5em;
+  margin: 0.3em 0;
   box-shadow: var(--neon-glow);
   display: flex;
   align-items: center;
-  gap: 0.5em;
+  gap: 0.3em;
   font-family: var(--font-head);
 }
 .neon-badge {
