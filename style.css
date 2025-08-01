@@ -134,16 +134,16 @@ body {
 .neon-badge {
   background: #011f2e;
   color: var(--neon-blue);
-  padding: 0.2em 0.5em;
-  border-radius: 6px;
-  box-shadow: 0 0 8px #00e6ff88;
-  font-weight: 700;
+  padding: 0.1em 0.3em;
+  border-radius: 4px;
+  box-shadow: 0 0 4px #00e6ff88;
+  font-weight: 500;
   font-family: var(--font-head);
 }
 .status-online {
   color: #00ffea;
   background: #0f3d2e;
-  text-shadow: 0 0 8px #00ffe6;
+  text-shadow: 0 0 4px #00ffe6;
 }
 
 .neon-btn {
